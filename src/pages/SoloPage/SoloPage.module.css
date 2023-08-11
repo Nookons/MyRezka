@@ -30,3 +30,16 @@ mark {
     color: #272829;
     background-color: #FFF6E0;
 }
+
+
+@media (350px <= width <= 750px) {
+    .Poster {
+        flex-direction: column;
+        width: calc(100% - 28px);
+        padding: 14px;
+    }
+
+    .Poster > img{
+        padding: 0;
+    }
+}
