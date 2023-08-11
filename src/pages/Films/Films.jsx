@@ -12,7 +12,11 @@ const Films = () => {
 
     const [isLoad, setIsLoad] = useState(false);
 
-    const API_KEY = '7ff61e92-1e7b-4472-8cba-20d041258dd2';
+
+    //7ff61e92-1e7b-4472-8cba-20d041258dd2
+    //35ab9402-b96b-47e7-8fd5-a0d6c3a1b177
+
+    const API_KEY = '35ab9402-b96b-47e7-8fd5-a0d6c3a1b177';
     const TOP_100_URL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1';
 
     const [movies, setMovies] = useState([])
