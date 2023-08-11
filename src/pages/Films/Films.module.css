@@ -1,0 +1,9 @@
+.Main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    max-width: 1350px;
+    margin: 0 auto !important;
+    padding-bottom: 150px;
+}

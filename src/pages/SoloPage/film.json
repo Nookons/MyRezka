@@ -1,0 +1,58 @@
+{
+  "kinopoiskId": 453253,
+  "kinopoiskHDId": null,
+  "imdbId": null,
+  "nameRu": "Любовь, как мотив",
+  "nameEn": null,
+  "nameOriginal": null,
+  "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/453253.jpg",
+  "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/453253.jpg",
+  "coverUrl": null,
+  "logoUrl": null,
+  "reviewsCount": 1,
+  "ratingGoodReview": 100,
+  "ratingGoodReviewVoteCount": 1,
+  "ratingKinopoisk": 5.6,
+  "ratingKinopoiskVoteCount": 835,
+  "ratingImdb": null,
+  "ratingImdbVoteCount": 0,
+  "ratingFilmCritics": null,
+  "ratingFilmCriticsVoteCount": 0,
+  "ratingAwait": null,
+  "ratingAwaitCount": 0,
+  "ratingRfCritics": null,
+  "ratingRfCriticsVoteCount": 0,
+  "webUrl": "https://www.kinopoisk.ru/film/453253/",
+  "year": 2008,
+  "filmLength": 86,
+  "slogan": null,
+  "description": "Мать Дины переезжает жить к дочери и почти сразу же между ней и зятем Пашей возникают напряжение и конфликты. Мать пытается открыть Дине глаза на мужа, но та не желает ничего слушать. Мать решает уехать на дачу и просит зятя помочь перевезти вещи. Но она тут же возвращается и признается, что случайно… убила Пашу. Теперь Дина и мать живут в постоянном страхе, что все откроется. И, вместе с тем, постепенно узнают про Пашу все больше неприятных и загадочных подробностей. И, когда неизвестно отчего умирает мать, а в квартиру приходит опер Ведерников, — Дина уже на грани нервного срыва.",
+  "shortDescription": null,
+  "editorAnnotation": null,
+  "isTicketsAvailable": false,
+  "productionStatus": null,
+  "type": "FILM",
+  "ratingMpaa": null,
+  "ratingAgeLimits": "age16",
+  "countries": [
+    {
+      "country": "Россия"
+    }
+  ],
+  "genres": [
+    {
+      "genre": "криминал"
+    },
+    {
+      "genre": "мелодрама"
+    }
+  ],
+  "startYear": null,
+  "endYear": null,
+  "serial": false,
+  "shortFilm": false,
+  "completed": false,
+  "hasImax": false,
+  "has3D": false,
+  "lastSync": "2023-07-22T03:21:34.659024"
+}
