@@ -1,0 +1,75 @@
+
+.Main {
+    background-color: white;
+    height: calc(100dvh - 108px);
+    color: #272829;
+    display: flex;
+    justify-content: space-between;
+}
+
+.UserFrom {
+    width: clamp(350px, calc( 100% - 28px), 750px);
+    margin: 0 auto;
+    padding: 36px 14px;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.LeftSide {
+    width: clamp(350px, 50%, 50%);
+    padding: 14px;
+}
+.UserFrom > h1{
+    font-size: 96px;
+    padding-top: 100px;
+}
+
+.UserFrom > h5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    padding: 25px 0;
+}
+
+.UserFrom > button{
+    margin: 50px 0 !important;
+}
+
+a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+}
+
+.SignUpBlock {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+}
+.RightSide {
+    width: clamp(350px, 50%, 50%);
+    overflow: hidden;
+}
+.RightSide > img {
+    width: 100%;
+}
+
+@media (300px <= width <= 1350px) {
+
+    .UserFrom > h1{
+        font-size: 36px;
+        padding: 0;
+    }
+
+    .RightSide {
+        display: none;
+    }
+
+    .LeftSide {
+        width: clamp(350px, 100%, 100%);
+        padding: 14px;
+    }
+}

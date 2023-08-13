@@ -1,0 +1,13 @@
+.Main {
+    width: calc(100% - 24px);
+    margin: 12px 0 !important;
+}
+
+.Main > label {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+.Main > div > input {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}

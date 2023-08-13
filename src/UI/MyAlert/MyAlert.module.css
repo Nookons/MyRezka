@@ -1,0 +1,13 @@
+.Main {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    margin: 14px !important;
+    align-items: center !important;
+    display: none !important;
+}
+
+.Active {
+    display: flex !important;
+}

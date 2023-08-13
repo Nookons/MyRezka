@@ -1,7 +1,8 @@
 .Main {
-    max-width: 1350px;
+    width: clamp( 350px, calc( 100% - 28px), 650px);
     margin: 0 auto;
     padding: 14px;
+    padding-bottom: 150px;
 }
 
 .Main > div{

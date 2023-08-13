@@ -1,9 +1,22 @@
 .Main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
     max-width: 1350px;
     margin: 0 auto !important;
     padding-bottom: 150px;
 }
+
+.InfoBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+}
+
+.Section {
+}
+
+@media (300px <= width <= 710px) {
+    .InfoBlock > button{
+        font-size: 12px;
+    }
+}
+

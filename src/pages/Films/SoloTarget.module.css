@@ -1,8 +1,8 @@
 .Main {
-    width: clamp(150px, 100%, 360px);
-    background-color: rgba(255, 255, 255, 0.15);
+    width: clamp(50px, calc(100%), 100%);
     border-radius: 5px;
     transition: .3s all ease;
+    overflow: hidden;
 }
 
 .Main:hover {
@@ -10,20 +10,26 @@
     background-color: rgba(255, 255, 255, 0.35);
 }
 
-.Main > img{
+.SoloPreview {
+    width: clamp(250px, 100%, 450px);
+    height: 550px;
+    border-radius: 5px;
+}
+
+.SecondaryPreview {
     width: 100%;
-    height: 470px;
-    border-radius: 5px 5px 0 0;
+    height: 300px;
+    border-radius: 5px;
 }
 
-.infoBlock {
-    padding: 14px;
+@media (300px <= width <= 750px) {
+    .SecondaryPreview {
+        width: 100%;
+        height: 250px;
+        border-radius: 5px;
+    }
 }
 
-.Genres {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-    font-size: 12px;
-}
+
+
+

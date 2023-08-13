@@ -1,9 +1,27 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import axios from "axios";
 import SoloTarget from "./SoloTarget";
 import cl from './Films.module.css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
+
+import {A11y, Autoplay, EffectCards, EffectCreative, Navigation, Pagination, Scrollbar} from "swiper/modules";
+import MyButton from "../../UI/MyButton/MyButton";
 
 const Films = () => {
+
+
+    let screenWidth = window.screen.width
+
+    const progressCircle = useRef(null);
+    const progressContent = useRef(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+        progressCircle.current.style.setProperty('--progress', 1 - progress);
+        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    };
 
 
     const [countPages, setCountPages] = useState([])
@@ -40,20 +58,67 @@ const Films = () => {
 
 
     return (
-        <div>
-            <h1 style={{display: 'flex', justifyContent: 'center'}}>Top 100 films</h1>
-            <div className={cl.Main}>
-                {movies.map(movie => {
-                    return (
-                        <SoloTarget
-                            key={movie.filmId}
-                            movie={movie}
-                        />
-                    )
-                })}
+        <div className={cl.Main}>
+            <div className={cl.Section}>
+                <div className={cl.InfoBlock}>
+                    <span style={{display: 'flex', justifyContent: 'left', padding: 14}}>The latest</span>
+                    <MyButton variant='text'> Watch more <ArrowForwardIosIcon/></MyButton>
+                </div>
+                <Swiper
+                    style={{padding: '0 24px'}}
+                    slidesPerView={1}
+                    spaceBetween={8}
+                    loop={false}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                    {movies.map(movie => {
+                        return (
+                            <SwiperSlide>
+                                <SoloTarget
+                                    previewCount='1'
+                                    key={movie.filmId}
+                                    movie={movie}
+                                />
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
             </div>
-            <div>
 
+            <div className={cl.Section}>
+                <div className={cl.InfoBlock}>
+                    <span style={{display: 'flex', justifyContent: 'left', padding: 14}}>Movies for you</span>
+                    <MyButton variant='text'> Watch more <ArrowForwardIosIcon/></MyButton>
+                </div>
+                <Swiper
+                    style={{padding: '0 24px'}}
+                    slidesPerView={2}
+                    spaceBetween={8}
+                    loop={false}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                    {movies.map(movie => {
+                        return (
+                            <SwiperSlide>
+                                <SoloTarget
+                                    previewCount='2'
+                                    key={movie.filmId}
+                                    movie={movie}
+                                />
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
             </div>
         </div>
     );

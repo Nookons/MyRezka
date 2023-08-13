@@ -1,0 +1,27 @@
+.Main {
+    margin: 0 !important;
+    color: #e8e8e8 !important;
+    border: 1px solid #272829 !important;
+    background-color: #272829 !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400 !important;
+    letter-spacing: 1.5px !important;
+    box-shadow: none !important;
+    padding: 4px 32px !important;
+}
+.Main:hover{
+    color: #272829 !important;
+    background-color: #ffffff !important;
+    box-shadow: none;
+}
+
+.Text {
+    padding: 4px 4px !important;
+    color: #272829 !important;
+    background-color: transparent !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transform: translateY(.5px);
+}

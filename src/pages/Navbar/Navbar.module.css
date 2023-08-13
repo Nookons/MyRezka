@@ -7,6 +7,52 @@
     padding: 16px;
 }
 
+.UserBlock {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    width: clamp(350px, 100%, 550px);
+    padding: 14px 14px;
+    border-radius: 4px;
+    transform: translateY(2.5px);
+    border: 1px solid #272829;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    transition: .3s all ease;
+}
+.UserBlock:hover {
+    border: 1px solid #272829;
+    cursor: pointer;
+}
+
+.NavLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-left: 14px;
+}
+
+.NavLinks > a > button{
+    display: block !important;
+    width: 100% !important;
+}
+
+.NavLinks > a {
+    width: 100% !important;
+}
+
+
+.RightButtonBlock {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+.RightButtonBlock > .NavLinks{
+    transform: translateY(-6px);
+}
+
 .Avatar {
     display: block;
     width: 75px;
@@ -30,10 +76,31 @@
     cursor:pointer
 }
 
-@media (400px <= width <= 600px) {
+@media (300px <= width <= 710px) {
+    .UserBlock {
+        display: flex;
+        justify-content: center;
+        margin-top: 14px;
+        width: calc(100% - 28px);
+    }
+
+    .NavLinks {
+        margin-left: 0;
+    }
+
+    .RightButtonBlock {
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
     .NavLinks {
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+    .NavLinks > a{
+        display: block;
     }
 }

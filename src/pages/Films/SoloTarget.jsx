@@ -1,8 +1,18 @@
 import React from 'react';
 import cl from './SoloTarget.module.css';
-import MyButton from "../../components/MyButton/MyButton";
+import MyButton from "../../UI/MyButton/MyButton";
 
-const SoloTarget = ({movie}) => {
+const SoloTarget = ({movie, previewCount}) => {
+
+
+    const rootClasses = []
+
+    if (previewCount === '1') {
+        rootClasses.push(cl.SoloPreview)
+    }
+    else if (previewCount === '2') {
+        rootClasses.push(cl.SecondaryPreview)
+    }
 
 
     const goFullPage = () => {
@@ -11,17 +21,7 @@ const SoloTarget = ({movie}) => {
 
     return (
         <div onClick={goFullPage} className={cl.Main}>
-            <img src={movie.posterUrlPreview} alt=""/>
-            <div className={cl.infoBlock}>
-                <h4>{movie.country}</h4>
-                <h3>{movie.nameRu}</h3>
-                <article>{movie.year}</article>
-                <article className={cl.Genres}>{movie.genres.map((element, index) => {
-                    return (
-                        <p key={index}>{element.genre} :</p>
-                    )
-                })}</article>
-            </div>
+            <img className={rootClasses.join(' ')} src={movie.posterUrlPreview} alt=""/>
         </div>
     );
 };
