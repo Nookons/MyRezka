@@ -1,12 +1,29 @@
 .Main {
-    width: clamp( 350px, calc( 100% - 28px), 650px);
+    width: clamp( 350px, calc( 100% - 28px), 1250px);
     margin: 0 auto;
-    padding: 14px;
-    padding-bottom: 150px;
 }
 
 .Main > div{
     margin: 0 auto;
+}
+
+.InfoBlock {
+    padding: 14px;
+}
+
+.InfoBlock > h4{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 24px !important;
+}
+.InfoBlock > p{
+    margin-top: 24px !important;
+}
+.InfoBlock > span{
+    margin-top: 124px !important;
 }
 
 .Poster {
@@ -14,30 +31,39 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 25px;
-
+    overflow: hidden;
+    padding: 14px 0;
 }
 .Poster > img{
-    max-width: 100%;
-    padding: 15px;
+    width: clamp(250px, calc(100%), 450px);
+    max-height: 550px;
 }
 
 mark {
     padding: 4px 12px;
-    font-weight: 600;
-    letter-spacing: 1.75px;
+    font-weight: 400;
     border-radius: 6px;
     margin-left: 6px;
     color: #272829;
-    background-color: #FFF6E0;
+    background-color: #b0b0b0;
+    font-size: 16px;
 }
 
 
-@media (350px <= width <= 750px) {
+@media (250px <= width <= 750px) {
+
+    mark {
+        font-size: 12px;
+    }
+
+    .InfoBlock {
+        padding: 14px 0;
+    }
+
     .Poster {
+        align-items: center;
         flex-direction: column;
-        width: calc(100% - 28px);
-        padding: 14px;
+        width: calc(100%);
     }
 
     .Poster > img{

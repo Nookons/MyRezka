@@ -77,3 +77,26 @@ export const getPremiers = ({setPremiers}) => {
     }
     getMovies(PREMIERS)
 }
+
+
+export const getTrailers = ({filmUid, setTrailerLink}) => {
+
+    //7ff61e92-1e7b-4472-8cba-20d041258dd2
+    //35ab9402-b96b-47e7-8fd5-a0d6c3a1b177
+
+    const API_KEY = '7ff61e92-1e7b-4472-8cba-20d041258dd2';
+    const TRAILERS = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/'+ filmUid +'/videos';
+
+    const getMovies = async (url) => {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'X-API-KEY': API_KEY,
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(res => res.json())
+            .then(json => setTrailerLink(json.items))
+            .catch(err => console.log(err))
+    }
+}
