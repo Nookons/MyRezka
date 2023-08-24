@@ -1,9 +1,17 @@
-import {CALCULATE_ROUTE, HOME_ROUTE, LOGIN_ROUTE, MOVIE_ROUTE, REGISTRATION_ROUTE} from "./utils/consts";
+import {
+    CALCULATE_ROUTE,
+    HOME_ROUTE,
+    LOGIN_ROUTE,
+    MOVIE_ROUTE,
+    REGISTRATION_ROUTE,
+    TELEGRAM_ROUTE
+} from "./utils/consts";
 import Home from "./pages/Home/Home";
 import Films from "./pages/Films/Films";
 import SoloPage from "./pages/SoloPage/SoloPage";
 import Login from "./pages/user/Login/Login";
 import Registration from "./pages/user/Registration/Registration";
+import Telegram from "./pages/telegram/Telegram";
 
 
 // routes for users
@@ -21,6 +29,10 @@ export const privateRoutes = [
     {
         path: MOVIE_ROUTE,
         Component: SoloPage,
+    },
+    {
+        path: TELEGRAM_ROUTE,
+        Component: Telegram,
     },
 ]
 
